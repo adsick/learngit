@@ -17,13 +17,13 @@
 
     impl dude{
         pub fn new(name: String, height: f32, weight: f32)->Self{
-            dude{name, height, weight, omge: Omgenum::choise1}
+            Self{name, height, weight, omge: Omgenum::choise1}
         }
         pub fn grow(self)->Self{
-            dude{height: self.height+1.0, ..self}
+            Self{height: self.height+1.0, ..self}
         }
         pub fn eat(mut self)->Self{
             
-            dude{weight: self.weight+1.0, ..self.grow()}
+            Self{weight: self.weight+1.0, ..self.grow()}
         }
     }
